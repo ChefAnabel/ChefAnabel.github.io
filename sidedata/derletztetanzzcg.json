@@ -112,7 +112,7 @@
     "name": "So hell wie die Sterne",
     "anzahl": "0",
     "setcode": "ev1",
-    "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card13tld.avif",
+    "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card16tld.avif",
     "game":"ZCG",
     "rarityname": "CommonCA"
   },
@@ -121,7 +121,7 @@
     "name": "So hell wie die Sterne",
     "anzahl": "0",
     "setcode": "ev1",
-    "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card14tld.avif",
+    "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card13tld.avif",
     "game":"ZCG",
     "rarityname": "CommonFA"
   },
@@ -130,7 +130,7 @@
     "name": "So hell wie die Sterne",
     "anzahl": "0",
     "setcode": "ev1",
-    "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card15tld.avif",
+    "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card14tld.avif",
     "game":"ZCG",
     "rarityname": "CommonFACA"
   },
@@ -139,16 +139,34 @@
     "name": "So hell wie die Sterne",
     "anzahl": "0",
     "setcode": "ev1",
-    "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card16tld.avif",
+    "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card15tld.avif",
     "game":"ZCG",
     "rarityname": "CommonOA"
   },
-    {
+  {
+    "nummer": "6(LI)",
+    "name": "So hell wie die Sterne",
+    "anzahl": "0",
+    "setcode": "ev1",
+    "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card20tld.avif",
+    "game":"ZCG",
+    "rarityname": "CommonFACA"
+  },
+  {
+    "nummer": "6(LI-CA)",
+    "name": "So hell wie die Sterne",
+    "anzahl": "0",
+    "setcode": "ev1",
+    "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card22tld.avif",
+    "game":"ZCG",
+    "rarityname": "CommonOA"
+  },
+  {
     "nummer": "7",
     "name": "Marino, Bodyguard des Königspaares",
     "anzahl": "0",
     "setcode": "ev1",
-    "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card17tld.avif",
+    "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card23tld.avif",
     "game":"ZCG",
     "rarityname": "Common"
   },
@@ -157,7 +175,7 @@
     "name": "Marino, Bodyguard des Königspaares",
     "anzahl": "0",
     "setcode": "ev1",
-    "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card18tld.avif",
+    "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card24tld.avif",
     "game":"ZCG",
     "rarityname": "CommonCA"
   },
@@ -166,7 +184,7 @@
     "name": "öfnet die Türe",
     "anzahl": "0",
     "setcode": "ev1",
-    "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card19tld.avif",
+    "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card25tld.avif",
     "game":"ZCG",
     "rarityname": "Common"
   },
@@ -175,7 +193,7 @@
     "name": "öfnet die Türe",
     "anzahl": "0",
     "setcode": "ev1",
-    "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card20tld.avif",
+    "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card26tld.avif",
     "game":"ZCG",
     "rarityname": "CommonCA"
   },
@@ -184,7 +202,7 @@
     "name": "Spatzenküken",
     "anzahl": "0",
     "setcode": "ev1",
-    "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card21tld.avif",
+    "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card27tld.avif",
     "game":"ZCG",
     "rarityname": "Common"
   },
@@ -193,7 +211,7 @@
     "name": "Spatzenküken",
     "anzahl": "0",
     "setcode": "ev1",
-    "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card22tld.avif",
+    "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card28tld.avif",
     "game":"ZCG",
     "rarityname": "CommonCA"
   },
@@ -202,7 +220,7 @@
     "name": "Brauner Mörderbär",
     "anzahl": "0",
     "setcode": "ev1",
-    "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card23tld.avif",
+    "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card29tld.avif",
     "game":"ZCG",
     "rarityname": "Common"
   },
@@ -211,7 +229,7 @@
     "name": "Brauner Mörderbär",
     "anzahl": "0",
     "setcode": "ev1",
-    "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card24tld.avif",
+    "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card30tld.avif",
     "game":"ZCG",
     "rarityname": "CommonCA"
   }
