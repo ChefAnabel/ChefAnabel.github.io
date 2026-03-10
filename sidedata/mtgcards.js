@@ -1,6 +1,70 @@
 let packcontent = [];//variable for the packsimulator to know wich raritys are left
 let cardslist = [];//variable for the packsimulator for saving the cards corresponding to their rarity as arrays for every rarity
 
+i18next
+  .use(i18nextBrowserLanguageDetector)
+  .init({
+    fallbackLng: "en",
+    debug: false,
+    resources: 
+    {
+      en: 
+      {
+        translation: 
+        {
+          title: "Trading Card Game Collection Tracker",
+          choose_set: "Choose a Set",
+          progress: "Progress",
+          total_cards: "Total Collected Cards from this Set",
+          save_json: "Save JSON",
+          collector_number: "Collector #",
+          card_name: "Card Name",
+          amount: "Amount",
+          set: "Set",
+          negative_cards: "You can't have negative amounts of owned cards",
+          failed_load: "Failed to load card lists from the website"
+        }
+      },
+      de: {
+        translation: {
+          title: "Trading Card Spiel Sammlungs-Tracker",
+          choose_set: "Set auswählen",
+          progress: "Fortschritt",
+          total_cards: "Gesammelte Karten aus diesem Set",
+          save_json: "JSON speichern",
+          collector_number: "Sammler #",
+          card_name: "Kartenname",
+          amount: "Anzahl",
+          set: "Set",
+          negative_cards: "Du kannst keine negative Anzahl an Karten besitzen",
+          failed_load: "Kartendaten konnten nicht geladen werden"
+        }
+      }
+    }
+  }, () => 
+{
+    updateContent();
+    updateHtmlLang();
+});
+
+function updateContent() {
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.dataset.i18n;
+    el.textContent = i18next.t(key);
+  });
+}
+
+function changeLanguage(lang) {
+  i18next.changeLanguage(lang, () => {
+    updateContent();
+    updateHtmlLang();
+  });
+}
+
+function updateHtmlLang() {
+  document.documentElement.lang = i18next.language;
+}
+
 /**
  * Method for loading the Cards into the table, when a set is selected in the setselection.
  * the card data comes from fetched json, wich is selected by setselection value
@@ -76,7 +140,7 @@ function removecard(parentelementtemp) {
         }
         else
         {
-            window.alert("You can't have negative amount's of owned cards");
+            window.alert(i18next.t("negative_cards"));
         }
     }
     catch
@@ -133,8 +197,8 @@ function getcollectionprogress()
             yourtotalcollectedcards = yourtotalcollectedcards+parseInt(tablecellcontent[2].textContent);
         })
         let percentatefromcollection = yourcollectedcards/cardsmax*100
-        document.getElementById('ProgressCollection').innerText='Progress: '+percentatefromcollection.toFixed(2)+'%';
-        document.getElementById('totalcardsinthisset').innerText='Total Collected Cards from this Set: '+yourtotalcollectedcards;
+        document.getElementById('ProgressCollection').innerText =i18next.t("progress") + ": " + percentatefromcollection.toFixed(2) + "%";
+        document.getElementById('totalcardsinthisset').innerText =i18next.t("total_cards") + ": " + yourtotalcollectedcards;
     }
     catch
     {
