@@ -58,6 +58,7 @@ function changeLanguage(lang) {
   i18next.changeLanguage(lang, () => {
     updateContent();
     updateHtmlLang();
+    getcollectionprogress();
   });
 }
 
@@ -140,7 +141,7 @@ function removecard(parentelementtemp) {
         }
         else
         {
-            window.alert(i18next.t("negative_cards"));
+            window.alert("You can't have negative amount's of owned cards");
         }
     }
     catch
@@ -196,9 +197,23 @@ function getcollectionprogress()
             }
             yourtotalcollectedcards = yourtotalcollectedcards+parseInt(tablecellcontent[2].textContent);
         })
-        let percentatefromcollection = yourcollectedcards/cardsmax*100
-        document.getElementById('ProgressCollection').innerText =i18next.t("progress") + ": " + percentatefromcollection.toFixed(2) + "%";
-        document.getElementById('totalcardsinthisset').innerText =i18next.t("total_cards") + ": " + yourtotalcollectedcards;
+        if(yourcollectedcards!=0)
+        {
+            let percentatefromcollection = yourcollectedcards/cardsmax*100
+            document.getElementById('ProgressCollection').innerText =i18next.t("progress") + ": " + percentatefromcollection.toFixed(2) + "%";
+        }
+        else
+        {
+            document.getElementById('ProgressCollection').innerText =i18next.t("progress") + ": 0%";
+        }
+        if(yourtotalcollectedcards!=0)
+        {
+            document.getElementById('totalcardsinthisset').innerText =i18next.t("total_cards") + ": " + yourtotalcollectedcards;
+        }
+        else
+        {
+            document.getElementById('totalcardsinthisset').innerText =i18next.t("total_cards") + ": 0";
+        }
     }
     catch
     {
