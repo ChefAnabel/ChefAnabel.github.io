@@ -240,7 +240,7 @@
     "setcode": "ev1",
     "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card31tld.avif",
     "game":"ZCG",
-    "rarityname": "CommonCA"
+    "rarityname": "Uncommon"
   },
     {
     "nummer": "11(CA)",
@@ -249,7 +249,7 @@
     "setcode": "ev1",
     "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card32tld.avif",
     "game":"ZCG",
-    "rarityname": "CommonCA"
+    "rarityname": "UncommonCA"
   },
     {
     "nummer": "11(FA)",
@@ -258,7 +258,7 @@
     "setcode": "ev1",
     "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card33tld.avif",
     "game":"ZCG",
-    "rarityname": "CommonCA"
+    "rarityname": "UncommonFA"
   },
     {
     "nummer": "11(FA-CA)",
@@ -267,7 +267,7 @@
     "setcode": "ev1",
     "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card34tld.avif",
     "game":"ZCG",
-    "rarityname": "CommonCA"
+    "rarityname": "UncommonFACA"
   },
     {
     "nummer": "12",
@@ -276,7 +276,7 @@
     "setcode": "ev1",
     "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card35tld.avif",
     "game":"ZCG",
-    "rarityname": "CommonCA"
+    "rarityname": "Uncommon"
   },
     {
     "nummer": "12(CA)",
@@ -285,7 +285,7 @@
     "setcode": "ev1",
     "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card36tld.avif",
     "game":"ZCG",
-    "rarityname": "CommonCA"
+    "rarityname": "UncommonCA"
   },
     {
     "nummer": "12(OA)",
@@ -294,7 +294,7 @@
     "setcode": "ev1",
     "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card37tld.avif",
     "game":"ZCG",
-    "rarityname": "CommonCA"
+    "rarityname": "UncommonOA"
   },
     {
     "nummer": "13",
@@ -303,7 +303,7 @@
     "setcode": "ev1",
     "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card38tld.avif",
     "game":"ZCG",
-    "rarityname": "CommonCA"
+    "rarityname": "Uncommon"
   },
     {
     "nummer": "13(CA)",
@@ -312,7 +312,7 @@
     "setcode": "ev1",
     "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card39tld.avif",
     "game":"ZCG",
-    "rarityname": "CommonCA"
+    "rarityname": "UncommonCA"
   },
     {
     "nummer": "14",
@@ -321,7 +321,7 @@
     "setcode": "ev1",
     "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card40tld.avif",
     "game":"ZCG",
-    "rarityname": "CommonCA"
+    "rarityname": "Uncommon"
   },
     {
     "nummer": "14(CA)",
@@ -330,7 +330,7 @@
     "setcode": "ev1",
     "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card41tld.avif",
     "game":"ZCG",
-    "rarityname": "CommonCA"
+    "rarityname": "UncommonCA"
   },
     {
     "nummer": "15",
@@ -339,7 +339,7 @@
     "setcode": "ev1",
     "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card42tld.avif",
     "game":"ZCG",
-    "rarityname": "CommonCA"
+    "rarityname": "Uncommon"
   },
     {
     "nummer": "15(CA)",
@@ -348,7 +348,7 @@
     "setcode": "ev1",
     "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card43tld.avif",
     "game":"ZCG",
-    "rarityname": "CommonCA"
+    "rarityname": "UncommonCA"
   },
     {
     "nummer": "16",
@@ -357,7 +357,7 @@
     "setcode": "ev1",
     "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card44tld.avif",
     "game":"ZCG",
-    "rarityname": "CommonCA"
+    "rarityname": "Uncommon"
   },
     {
     "nummer": "16(CA)",
@@ -366,7 +366,7 @@
     "setcode": "ev1",
     "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card45tld.avif",
     "game":"ZCG",
-    "rarityname": "CommonCA"
+    "rarityname": "UncommonCA"
   },
     {
     "nummer": "17",
@@ -375,7 +375,7 @@
     "setcode": "ev1",
     "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card46tld.avif",
     "game":"ZCG",
-    "rarityname": "CommonCA"
+    "rarityname": "Uncommon"
   },
     {
     "nummer": "17(CA)",
@@ -384,7 +384,7 @@
     "setcode": "ev1",
     "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card47tld.avif",
     "game":"ZCG",
-    "rarityname": "CommonCA"
+    "rarityname": "UncommonCA"
   },
     {
     "nummer": "17(OA)",
@@ -393,7 +393,7 @@
     "setcode": "ev1",
     "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card48tld.avif",
     "game":"ZCG",
-    "rarityname": "CommonCA"
+    "rarityname": "UncommonOA"
   },
     {
     "nummer": "18",
@@ -402,7 +402,7 @@
     "setcode": "ev1",
     "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card49tld.avif",
     "game":"ZCG",
-    "rarityname": "CommonCA"
+    "rarityname": "Rare"
   },
     {
     "nummer": "18(CA)",
@@ -411,7 +411,7 @@
     "setcode": "ev1",
     "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card50tld.avif",
     "game":"ZCG",
-    "rarityname": "CommonCA"
+    "rarityname": "RareCA"
   },
     {
     "nummer": "19",
@@ -420,7 +420,7 @@
     "setcode": "ev1",
     "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card51tld.avif",
     "game":"ZCG",
-    "rarityname": "CommonCA"
+    "rarityname": "Rare"
   },
     {
     "nummer": "19(CA)",
@@ -429,7 +429,7 @@
     "setcode": "ev1",
     "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card52tld.avif",
     "game":"ZCG",
-    "rarityname": "CommonCA"
+    "rarityname": "RareCA"
   },
     {
     "nummer": "20",
@@ -438,7 +438,7 @@
     "setcode": "ev1",
     "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card53tld.avif",
     "game":"ZCG",
-    "rarityname": "CommonCA"
+    "rarityname": "RareCA"
   },
     {
     "nummer": "20(CA)",
@@ -447,7 +447,7 @@
     "setcode": "ev1",
     "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card54tld.avif",
     "game":"ZCG",
-    "rarityname": "CommonCA"
+    "rarityname": "RareCA"
   },
     {
     "nummer": "20(OA)",
@@ -456,7 +456,7 @@
     "setcode": "ev1",
     "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card55tld.avif",
     "game":"ZCG",
-    "rarityname": "CommonCA"
+    "rarityname": "RareOA"
   },
     {
     "nummer": "20(FA)",
@@ -465,7 +465,7 @@
     "setcode": "ev1",
     "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card56tld.avif",
     "game":"ZCG",
-    "rarityname": "CommonCA"
+    "rarityname": "RareFA"
   },
     {
     "nummer": "20(FA-CA)",
@@ -474,7 +474,7 @@
     "setcode": "ev1",
     "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card57tld.avif",
     "game":"ZCG",
-    "rarityname": "CommonCA"
+    "rarityname": "RareFACA"
   },
     {
     "nummer": "21",
@@ -483,7 +483,7 @@
     "setcode": "ev1",
     "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card58tld.avif",
     "game":"ZCG",
-    "rarityname": "CommonCA"
+    "rarityname": "Rare"
   },
     {
     "nummer": "21(CA)",
@@ -492,7 +492,7 @@
     "setcode": "ev1",
     "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card59tld.avif",
     "game":"ZCG",
-    "rarityname": "CommonCA"
+    "rarityname": "RareCA"
   },
     {
     "nummer": "22",
@@ -501,7 +501,7 @@
     "setcode": "ev1",
     "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card60tld.avif",
     "game":"ZCG",
-    "rarityname": "CommonCA"
+    "rarityname": "Rare"
   },
     {
     "nummer": "22(CA)",
@@ -510,7 +510,7 @@
     "setcode": "ev1",
     "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card61tld.avif",
     "game":"ZCG",
-    "rarityname": "CommonCA"
+    "rarityname": "RareCA"
   },
     {
     "nummer": "23",
@@ -519,7 +519,7 @@
     "setcode": "ev1",
     "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card62tld.avif",
     "game":"ZCG",
-    "rarityname": "CommonCA"
+    "rarityname": "Epic"
   },
     {
     "nummer": "23(CA)",
@@ -528,7 +528,7 @@
     "setcode": "ev1",
     "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card63tld.avif",
     "game":"ZCG",
-    "rarityname": "CommonCA"
+    "rarityname": "EpicCA"
   },
     {
     "nummer": "24",
@@ -537,7 +537,7 @@
     "setcode": "ev1",
     "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card63tld.avif",
     "game":"ZCG",
-    "rarityname": "CommonCA"
+    "rarityname": "Epic"
   },
     {
     "nummer": "24(CA)",
@@ -546,7 +546,7 @@
     "setcode": "ev1",
     "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card65tld.avif",
     "game":"ZCG",
-    "rarityname": "CommonCA"
+    "rarityname": "EpicCA"
   },
     {
     "nummer": "25",
@@ -555,7 +555,7 @@
     "setcode": "ev1",
     "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card66tld.avif",
     "game":"ZCG",
-    "rarityname": "CommonCA"
+    "rarityname": "Epic"
   },
     {
     "nummer": "25(CA)",
@@ -564,7 +564,7 @@
     "setcode": "ev1",
     "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card67tld.avif",
     "game":"ZCG",
-    "rarityname": "CommonCA"
+    "rarityname": "EpicCA"
   },
     {
     "nummer": "26",
@@ -573,7 +573,7 @@
     "setcode": "ev1",
     "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card68tld.avif",
     "game":"ZCG",
-    "rarityname": "CommonCA"
+    "rarityname": "Epic"
   },
     {
     "nummer": "26(CA)",
@@ -582,35 +582,26 @@
     "setcode": "ev1",
     "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card69tld.avif",
     "game":"ZCG",
-    "rarityname": "CommonCA"
+    "rarityname": "EpicCA"
   },
-    {
-    "nummer": "26(FA-CA)",
-    "name": "Blitz der Wahrheit",
-    "anzahl": "0",
-    "setcode": "ev1",
-    "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card69tld.avif",
-    "game":"ZCG",
-    "rarityname": "CommonCA"
-  },
-    {
+  {
     "nummer": "26(OA)",
     "name": "Blitz der Wahrheit",
     "anzahl": "0",
     "setcode": "ev1",
     "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card70tld.avif",
     "game":"ZCG",
-    "rarityname": "CommonCA"
+    "rarityname": "EpicOA"
   },
-  {
-    "nummer": "27(FA-CA)",
+    {
+    "nummer": "26(FA-CA)",
     "name": "Blitz der Wahrheit",
     "anzahl": "0",
     "setcode": "ev1",
     "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card71tld.avif",
     "game":"ZCG",
-    "rarityname": "CommonCA"
-  },
+    "rarityname": "EpicFACA"
+    },
     {
     "nummer": "27",
     "name": "Magici, Mond des Meeres",
@@ -618,7 +609,7 @@
     "setcode": "ev1",
     "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card72tld.avif",
     "game":"ZCG",
-    "rarityname": "CommonCA"
+    "rarityname": "Legendary"
   },
     {
     "nummer": "27(CA)",
@@ -627,7 +618,7 @@
     "setcode": "ev1",
     "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card73tld.avif",
     "game":"ZCG",
-    "rarityname": "CommonCA"
+    "rarityname": "LegendaryCA"
   },
     {
     "nummer": "27(CFA)",
@@ -636,7 +627,7 @@
     "setcode": "ev1",
     "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card74tld.avif",
     "game":"ZCG",
-    "rarityname": "CommonCA"
+    "rarityname": "LegendaryFA"
   },
     {
     "nummer": "27(CLI-CA)",
@@ -645,7 +636,7 @@
     "setcode": "ev1",
     "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card75tld.avif",
     "game":"ZCG",
-    "rarityname": "CommonCA"
+    "rarityname": "LimitedCard"
   },
     {
     "nummer": "28",
@@ -654,7 +645,7 @@
     "setcode": "ev1",
     "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card76tld.avif",
     "game":"ZCG",
-    "rarityname": "CommonCA"
+    "rarityname": "Legendary"
   },
     {
     "nummer": "28(CA)",
@@ -663,7 +654,7 @@
     "setcode": "ev1",
     "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card77tld.avif",
     "game":"ZCG",
-    "rarityname": "CommonCA"
+    "rarityname": "LegendaryCA"
   },
     {
     "nummer": "28(CFA)",
@@ -672,7 +663,7 @@
     "setcode": "ev1",
     "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card78tld.avif",
     "game":"ZCG",
-    "rarityname": "CommonCA"
+    "rarityname": "LegendaryFA"
   },
     {
     "nummer": "28(CLI-CA)",
@@ -681,7 +672,7 @@
     "setcode": "ev1",
     "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card79tld.avif",
     "game":"ZCG",
-    "rarityname": "CommonCA"
+    "rarityname": "LimitedCard"
     },
     {
     "nummer": "29",
@@ -690,7 +681,7 @@
     "setcode": "ev1",
     "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card17tld.avif",
     "game":"ZCG",
-    "rarityname": "CommonCA"
+    "rarityname": "Zalan"
   },
     {
     "nummer": "29(CA)",
@@ -699,7 +690,7 @@
     "setcode": "ev1",
     "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card18tld.avif",
     "game":"ZCG",
-    "rarityname": "CommonCA"
+    "rarityname": "ZalanCA"
   },
     {
     "nummer": "29(CFA)",
@@ -708,7 +699,7 @@
     "setcode": "ev1",
     "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card19tld.avif",
     "game":"ZCG",
-    "rarityname": "CommonCA"
+    "rarityname": "ZalanFA"
   },
     {
     "nummer": "29(CFA-CA)",
@@ -717,7 +708,7 @@
     "setcode": "ev1",
     "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card21tld.avif",
     "game":"ZCG",
-    "rarityname": "CommonCA"
+    "rarityname": "ZalanFACA"
   },
     {
     "nummer": "6(CFA)",
@@ -726,7 +717,7 @@
     "setcode": "ev1",
     "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card20tld.avif",
     "game":"ZCG",
-    "rarityname": "CommonCA"
+    "rarityname": "CommonFA"
   },
     {
     "nummer": "6(CFA-CA)",
@@ -735,7 +726,7 @@
     "setcode": "ev1",
     "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card22tld.avif",
     "game":"ZCG",
-    "rarityname": "CommonCA"
+    "rarityname": "CommonFACA"
   },
     {
     "nummer": "38(OA)",
@@ -744,6 +735,6 @@
     "setcode": "ev1",
     "bildlink": "./sidedata/cardimages/ZCG/EventUndPromos/Eventsets/2025/The_last_Dance_Der_letzte_Tanz/card80tld.avif",
     "game":"ZCG",
-    "rarityname": "CommonCA"
+    "rarityname": "LegendaryOA"
   }
 ]
