@@ -152,7 +152,7 @@ tbody tr:hover {
 .pack-bg {
     margin: 0;
     min-height: 100vh;
-    background-image: url(./cardimages/assetssim/QueenAyaka.jpg);
+    background-image: url(./cardimages/assetssim/backgrounds/Galaxy.avif);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;

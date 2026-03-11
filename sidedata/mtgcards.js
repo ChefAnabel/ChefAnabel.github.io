@@ -4,7 +4,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const packSelect = document.getElementById('packselection');
     const backButton = document.getElementById('ZCGPackSimulatorback');
     const openPackButton = document.getElementById('openpackbutton');
+    const backgroundselector = document.getElementById('backgroundselection');
 
+    backgroundselector.addEventListener('change', backgroundchangepacksim);
     packSelect.addEventListener('change', packimagechange);
 
     backButton.addEventListener('click', () => {
@@ -420,6 +422,19 @@ function openpacksimulator()
 function backtomainmenu()
 {
     window.location.href = '../index.html';
+}
+
+const backgroundimg = {
+    "galaxy": "./sidedata/cardimages/assetssim/backgrounds/Galaxy.avif",
+    "ayaka": "./sidedata/cardimages/assetssim/backgrounds/QueenAyaka.avif"
+};
+
+async function backgroundchangepacksim()
+{
+    const packbackselect = document.getElementById('backgroundselection');
+    const background = document.getElementById('background');
+    const selectedValue = packbackselect.value;
+    background.style.backgroundImage = `url('${backgroundimg[selectedValue] || "./sidedata/cardimages/assetssim/backgrounds/Galaxy.avif"}')`;
 }
 
 const packImages = {

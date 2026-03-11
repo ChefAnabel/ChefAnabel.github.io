@@ -7,7 +7,7 @@
     <script src="https://unpkg.com/i18next@23/i18next.min.js"></script>
     <script src="https://unpkg.com/i18next-browser-languagedetector@7/i18nextBrowserLanguageDetector.min.js"></script>
 </head>
-<body class="pack-bg">
+<body class="pack-bg" id="background">
     <div class="pack-app">
         <h1 class="pack-title">Pack Opener</h1>
 
@@ -22,6 +22,10 @@
                 </optgroup>
             </select>
             <button id="ZCGPackSimulatorback" onclick="backtomainmenu()">🌸 Back</button>
+            <select name="backgroundselection" id="backgroundselection">
+                <option value="galaxy">Galaxy</option>
+                <option value="ayaka">Ayaka</option>
+            </select>
         </div>
 
         <button id="openpackbutton" onclick="openpack()">
