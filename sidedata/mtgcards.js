@@ -2,22 +2,8 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     const packSelect = document.getElementById('packselection');
-    const packImage = document.getElementById('packimage');
     const backButton = document.getElementById('ZCGPackSimulatorback');
     const openPackButton = document.getElementById('openpackbutton');
-
-    const packImages = {
-        "m20pack.json": "./sidedata/cardimages/assetssim/packs/m20pack.png",
-        "./sidedata/Final_Fantasy.json": "./sidedata/cardimages/assetssim/packs/Final_Fantasy.png",
-        "./sidedata/derletztetanzzcg.json": "./sidedata/cardimages/assetssim/packs/derletztetanz.png"
-    };
-
-    async function packimagechange()
-    {
-        await loadCards();
-        const selectedValue = packSelect.value;
-        packImage.src = packImages[selectedValue] || "./sidedata/cardimages/assetssim/packs/m20pack.png";
-    }
 
     packSelect.addEventListener('change', packimagechange);
 
@@ -436,6 +422,26 @@ function backtomainmenu()
     window.location.href = '../index.html';
 }
 
+const packImages = {
+    "m20pack.json": "./sidedata/cardimages/assetssim/packs/m20pack.png",
+    "./sidedata/Final_Fantasy.json": "./sidedata/cardimages/assetssim/packs/Final_Fantasy.png",
+    "./sidedata/derletztetanzzcg.json": "./sidedata/cardimages/assetssim/packs/derletztetanz.png"
+};
+
+/**
+* sets the image of the pack to the image of the current selected set for the pack
+*/
+async function packimagechange()
+{
+    const packSelect = document.getElementById('packselection');
+    const packImage = document.getElementById('packimage');
+    packcontent = [];
+    await loadCards();
+    const selectedValue = packSelect.value;
+    packImage.src = packImages[selectedValue] || "./sidedata/cardimages/assetssim/packs/m20pack.png";
+}
+
+
 async function loadCards()
 {
     const setforpack = document.getElementById("packselection").value;
@@ -618,17 +624,6 @@ function calculateChance(count, chances, scalein10) {
         }
     }
     return results;
-}
-
-/**
- * sets the image of the pack to the image of the current selected set for the pack
- */
-async function packimagechange()
-{
-    await loadCards();
-    const img = document.getElementById("packimage");
-    let textvalue = document.getElementById("packselection").value
-    img.src = "./sidedata/cardimages/assetssim/packs/"+textvalue.substring(11,((textvalue.length)-5))+".png"
 }
 
 /**
