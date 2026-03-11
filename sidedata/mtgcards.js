@@ -1,5 +1,35 @@
-let packcontent = [];//variable for the packsimulator to know wich raritys are left
-let cardslist = [];//variable for the packsimulator for saving the cards corresponding to their rarity as arrays for every rarity
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const packSelect = document.getElementById('packselection');
+    const packImage = document.getElementById('packimage');
+    const backButton = document.getElementById('ZCGPackSimulatorback');
+    const openPackButton = document.getElementById('openpackbutton');
+
+    const packImages = {
+        "m20pack.json": "./sidedata/cardimages/assetssim/packs/m20pack.png",
+        "./sidedata/Final_Fantasy.json": "./sidedata/cardimages/assetssim/packs/finalfantasy.png",
+        "./sidedata/derletztetanzzcg.json": "./sidedata/cardimages/assetssim/packs/derletztetanz.png"
+    };
+
+    async function packimagechange()
+    {
+        await loadCards();
+        const selectedValue = packSelect.value;
+        packImage.src = packImages[selectedValue] || "./sidedata/cardimages/assetssim/packs/m20pack.png";
+    }
+
+    packSelect.addEventListener('change', loadImgForPack);
+
+    backButton.addEventListener('click', () => {
+        console.log("Back button clicked");
+    });
+
+    openPackButton.addEventListener('click', () => {
+        console.log("Open pack button clicked");
+    });
+});
+
 
 i18next
   .use(i18nextBrowserLanguageDetector)
@@ -65,6 +95,51 @@ function changeLanguage(lang) {
 function updateHtmlLang() {
   document.documentElement.lang = i18next.language;
 }
+
+let rarityDict = {};
+let packcontent = [];//variable for the packsimulator to know wich raritys are left
+const rarityIdMap =
+{
+    1:"Common",
+    2:"CommonCA",
+    3:"CommonFA",
+    4:"CommonOA",
+    5:"CommonFACA",
+    6:"Uncommon",
+    7:"UncommonCA",
+    8:"UncommonFA",
+    9:"UncommonOA",
+    10:"UncommonFACA",
+    11:"Rare",
+    12:"RareCA",
+    13:"RareFA",
+    14:"RareOA",
+    15:"RareFACA",
+    16:"Epic",
+    17:"EpicCA",
+    18:"EpicFA",
+    19:"EpicOA",
+    20:"EpicFACA",
+    21:"Legendary",
+    22:"LegendaryCA",
+    23:"LegendaryFA",
+    24:"LegendaryOA",
+    25:"LegendaryFACA",
+    26:"Zalan",
+    27:"ZalanCA",
+    28:"ZalanFA",
+    29:"ZalanOA",
+    30:"ZalanFACA",
+    31:"Promo",
+    32:"LimitedCard",
+    33:"Common",
+    34:"Uncommon",
+    35:"Rare",
+    36:"Mythic Rare",
+    37:"Serialized",
+    38:"TwoColorLand",
+    39:"BasicLand"
+};
 
 /**
  * Method for loading the Cards into the table, when a set is selected in the setselection.
@@ -364,99 +439,63 @@ function backtomainmenu()
 /**
  * method for opening the pack or loading the next card in pack according to packcontent
  */
+async function loadCards()
+{
+    const setforpack = document.getElementById("packselection").value;
+    const response = await fetch(setforpack);
+    const daten = await response.json();
+
+    rarityDict = {};
+
+    daten.forEach(card =>
+    {
+        if(!rarityDict[card.rarityname])
+        {
+            rarityDict[card.rarityname] = [];
+        }
+
+        rarityDict[card.rarityname].push(card);
+    });
+}
+
+
 async function openpack()
 {
-    if(packcontent.length==0)
+    if(packcontent.length == 0)
     {
-        packcontent=await openpackfill();
+        await loadCards();
+        packcontent = await openpackfill();
     }
     else
     {
-    let setforpack = document.getElementById("packselection").value;
-    let cardslist = [];
-    let rarity1 = [];
-    let rarity2 = [];
-    let rarity3 = [];
-    let rarity4 = [];
-    let rarity5 = [];
-    let rarity6 = [];
-    let rarity7 = [];
-    let rarity8 = [];
-    let rarity9 = [];
-    let rarity10 = [];
-    const response = await fetch(setforpack);
-    const daten = await response.json();
-    daten.forEach(card => {//loads every card filteres by their rarity into the list with raritys to select the card with the correct rarity with packcontent and the list[id]
-            if(card.game=="MTG") {
-            {
-                if(card.rarityname=="BasicLand")
-                {
-                    rarity9.push(card);
-                }
-                else if(card.rarityname=="Common")
-                {
-                    rarity1.push(card);
-                }
-                else if(card.rarityname=="Uncommon")
-                {
-                    rarity2.push(card);
-                }
-                else if(card.rarityname=="Rare")
-                {
-                    rarity3.push(card);
-                }
-                else if(card.rarityname=="Mythic Rare")
-                {
-                    rarity4.push(card);
-                }
-                else if(card.rarityname=="TwoColorLand")
-                {
-                    rarity8.push(card);
-                }
-            }
-        }})
-        cardslist = [rarity1,rarity2,rarity3,rarity4,rarity5,rarity6,rarity7,rarity8,rarity9,rarity10];
-        randcard = Math.floor(Math.random()*cardslist[packcontent[0]-1].length)
+        const rarityId = packcontent[0];
+        const rarityName = rarityIdMap[rarityId];
+        const cardList = rarityDict[rarityName];
+        if(!cardList || cardList.length === 0)
+        {
+            console.log("No cards for rarity:", rarityName);
+            return;
+        }
+        const randcard = Math.floor(Math.random()*cardList.length);
         const img = document.getElementById("packimage");
-        img.src = cardslist[packcontent[0]-1][randcard].bildlink;
-        packcontent = packcontent.reverse();
-        packcontent.pop();
-        packcontent = packcontent.reverse();
+        img.src = cardList[randcard].bildlink;
+        packcontent.shift();
     }
 }
 
-/**
- * Method for delaying async methods and for awaiting results of actions and tasks
- */
-function delay(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
-}
-
-/**
- * sets the image of the pack to the image of the current selected set for the pack
- */
-function packimagechange()
-{
-    const img = document.getElementById("packimage");
-    let textvalue = document.getElementById("packselection").value
-    img.src = "./sidedata/cardimages/assetssim/packs/"+textvalue.substring(11,((textvalue.length)-5))+".png"
-}
-
-/**
- * fills the packcontent list with the ids of the raritys for the picking in cardslist using 2 methods forfast cardgame adding and editing
- */
 async function openpackfill()
 {
     packimagechange();
     let chancelist = [];
     let endrewards = [];
-    if(await checkSet()=="MTG2")
+    const dataCheck = await checkSet();
+    if(dataCheck[0]=="MTG2"&&dataCheck[1]=="FIN")
     {
-        chancelist=setchancelist([10000,3675,700],[3,4,5]);
-        endrewards.push(1,1,1,1,1,1);
+        chancelist=setchancelist([10000,3675,700],[35,36,33/*last 33 placeholder for rest1*/]);
+        endrewards.push(33,33,33,33,33,33);
         if(Math.floor(Math.random()*100000)<=33333)
         {
-            chancelist=setchancelist([10000,3675,700],[2,3,4]);
+            chancelist=setchancelist([10000,3675,700],[34,35,36]);
             for(const result of calculateChance(1,chancelist,4))
             {
                 endrewards.push(result);
@@ -464,47 +503,80 @@ async function openpackfill()
         }
         else
         {
-            endrewards.push(2);
+            endrewards.push(34);
         }
-        endrewards.push(2,2,2);
-        chancelist=setchancelist([1000,833,250,224,167,55],[1,2,1,2,3,4]);
+        endrewards.push(34,34,34);
+        chancelist=setchancelist([1000,833,250,224,167,55],[33,34,33,34,35,36]);
         for(const result of calculateChance(1,chancelist,3))
         {
             endrewards.push(result);
         }
-        chancelist=setchancelist([1000,200,100,20,10,5],[3,4,3,4,3,4]);
+        chancelist=setchancelist([1000,200,100,20,10,5],[35,36,35,36,35,36]);
         for(const result of calculateChance(1,chancelist,3))
         {
-                endrewards.push(result);
+            endrewards.push(result);
         }
-        chancelist=setchancelist([10000,4425,835,285,210,200,150,50,25],[1,2,3,4,1,2,3,4,7]);
+        chancelist=setchancelist([10000,4425,835,285,210,200,150,50,25],[33,34,35,36,33,34,35,36,33/*last 33 = placeholder for rest2*/]);
         for(const result of calculateChance(1,chancelist,4))
         {
             endrewards.push(result);
         }
-        chancelist=setchancelist([100,45],[8,9]);
+        chancelist=setchancelist([100,45],[38,39]);
         for(const result of calculateChance(1,chancelist,2))
         {
             endrewards.push(result);
         }
-        endrewards.sort((b, a) => b - a);
     }
+    if(dataCheck[0]=="ZCG1"&&dataCheck[1]=="ev1")
+    {
+        chancelist=setchancelist([10000,3000,1200,400,100],[1,2,3,4,5]);
+        for(const result of calculateChance(6, chancelist, 4))
+        {
+            endrewards.push(result);
+        }
+        chancelist=setchancelist([1000000, 257141, 114285, 42857, 14286,428568, 110203, 48979, 18367, 6122],[1,2,3,4,5,6,7,8,9,10]);
+        for(const result of calculateChance(1, chancelist, 6))
+        {
+            endrewards.push(result);
+        }
+        chancelist=setchancelist([10000,3000,1200,400,100],[6,7,8,9,10]);
+        for(const result of calculateChance(4, chancelist, 4))
+        {
+            endrewards.push(result);
+        }
+        chancelist=setchancelist([10000,3000,1200,400,100],[11,12,13,14,15]);
+        for(const result of calculateChance(2, chancelist, 4))
+        {
+            endrewards.push(result);
+        }
+        chancelist=setchancelist([1000000, 257121, 114306, 42857, 14286,111111, 28572, 12698, 4762, 1587],[11,12,13,14,15, 21,22,23,24,25]);
+        for(const result of calculateChance(1, chancelist, 6))
+        {
+            endrewards.push(result);
+        }
+        chancelist=setchancelist([1000000, 257259, 114330, 42864, 14277,20400, 5256, 2337, 875, 292,146],[16,17,16/*original epicFA*/,19,20,26,27,28,27/*original ZalanOA chance*/,30,32]);
+        for(const result of calculateChance(1, chancelist, 6))
+        {
+            endrewards.push(result);
+        }
+    }
+    endrewards.sort((b, a) => b - a);
     return endrewards;
 }
 
 async function checkSet()
 {
+    let setCol = [];
     let setname = document.getElementById("packselection").value.substring(11,document.getElementById("packselection").value.length)
-    let gameString = "Empty";
     const response = await fetch("./sidedata/filecheck.json");
     const daten = await response.json();
     daten.forEach(setData => {
         if(setData.filename==setname)
         {
-            gameString = setData.packtype;
+            setCol = [setData.packtype, setData.packgroup];
         }
     });
-    return gameString;
+    return setCol;
 }
 
 
@@ -530,7 +602,8 @@ function calculateChance(count, chances, scalein10) {
     for (let i = 0; i < count; i++) {
         const roll = Math.floor(Math.random() * max);
         for (const chanceitem of chances) {
-            if (roll < chanceitem.rewardchance) {
+            if (roll <= chanceitem.rewardchance) 
+            {
                 results.push(chanceitem.rewardid);
                 break;
             }
@@ -539,11 +612,26 @@ function calculateChance(count, chances, scalein10) {
     return results;
 }
 
-function startlogin() 
+/**
+ * sets the image of the pack to the image of the current selected set for the pack
+ */
+async function packimagechange()
 {
-    window.location.href = './loginwindow.html';
+    await loadCards();
+    const img = document.getElementById("packimage");
+    let textvalue = document.getElementById("packselection").value
+    img.src = "./sidedata/cardimages/assetssim/packs/"+textvalue.substring(11,((textvalue.length)-5))+".png"
 }
 
+/**
+ * Method for delaying async methods and for awaiting results of actions and tasks
+ */
+function delay(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+/**
+ * fills the packcontent list with the ids of the raritys for the picking in cardslist using 2 methods forfast cardgame adding and editing
+ */
 
 /*
 12 pixel abstand scene cards plus 8 pixel breite strichlinie
