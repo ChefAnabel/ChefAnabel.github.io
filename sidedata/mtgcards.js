@@ -130,48 +130,6 @@ const rarityIdMap =
 };
 
 /**
- * Method for loading the Cards into the table, when a set is selected in the setselection.
- * the card data comes from fetched json, wich is selected by setselection value
- */
-function loadmtgcards() {
-    try
-    {
-        if(document.getElementById('setsselection').value !=="") {
-            fetch(document.getElementById('setsselection').value)
-                .then(response => response.json())
-                .then(daten => {
-                    const kartentabelle = document.getElementById('mtgcardlist').querySelector('tbody');
-                    kartentabelle.innerHTML = "";
-                    daten.forEach(card => {
-                        const tabellezeile = document.createElement('tr');
-                        tabellezeile.id = `karte${card.nummer}`;
-                        tabellezeile.innerHTML = `
-            <td id="mtgtablecell">${card.nummer}</td>
-            <td id="mtgtablecell">${card.name}</td>
-            <td id="mtgtablecell">${card.anzahl}</td>
-            <td id="mtgtablecell">${card.setcode}</td>
-            <td id="mtgtablecell"><button onclick="addcard(parentElement)">+</button></td>
-            <td id="mtgtablecell"><button onclick="removecard(parentElement)">-</button></td>
-            <td id="mtgtablecell">
-                <div class="tooltip">&#128065
-                    <span class="tooltiptext"><img src="${card.bildlink}" alt="failed to Load Image" id="imagecard"></span>
-                </div>
-            </td>
-          `;
-                        kartentabelle.appendChild(tabellezeile);
-                    });
-                })
-                .catch(error => console.error('Could not Load json because the following Error accoured:', error));
-        }
-    }
-    catch
-    {
-        window.alert("failed to load cardlists from the webside")
-    }
-
-}
-
-/**
  * Method for increasing the number of amount in the table for the card,
  * where the button with + was clicked. uses the parentelement for it and navigates to the element with the number
  */
@@ -315,102 +273,100 @@ function saveasfile()
 async function getasfile()
 {
     try
-    {//checks if correct file is selected. acomplishes that by checking the filename of the selected file and if it contains the setselectionvalue(only the name of json without .json)
-        if(document.getElementById('getbutton').value.includes(document.getElementById('setsselection').value.substring(11,document.getElementById('setsselection').value.length-5)+"fromCardGamesCollectedCards") && document.getElementById('setsselection').value!=='') {
-            const elementtemp = document.getElementById("getbutton");
-            let fileglobal = elementtemp.files[0];
-            let numinfile =[];
-            let reader = new FileReader();
-            const kartentabelle = document.getElementById('mtgcardlist').querySelector('tbody');
-            reader.onload = function (eventt) {
-                try {
+    {
+        const elementtemp = document.getElementById("getbutton");
+        let fileglobal = elementtemp.files[0];
+        if(fileglobal==null)
+        {
+            fileglobal = new File(["emty"], "emptyselect.json", { type: "application/json" });
+        }
+        let numinfile =[];
+        let reader = new FileReader();
+        const kartentabelle = document.getElementById('mtgcardlist').querySelector('tbody');
+        reader.onload = function (eventt) {
+            try {
+                if(eventt.target.result!="empty")
+                {
                     const data = JSON.parse(eventt.target.result);
                     kartentabelle.innerHTML = "";
                     data.forEach(card => {
-                    let id = card.nummer;
-                    let an = card.anzahl;
-                    numinfile.push({
-                        nummer:id,
-                        anzahl:an
+                        let id = card.nummer;
+                        let an = card.anzahl;
+                        numinfile.push({
+                            nummer:id,
+                            anzahl:an
+                        });
                     });
-                    });
-                }
-                catch
-                {
-                    alert("something went wrong")
                 }
             }
-            reader.readAsText(fileglobal);
-            fetch(document.getElementById('setsselection').value)
-                .then(response => response.json())
-                .then(daten => {
-                    const kartentabelle = document.getElementById('mtgcardlist').querySelector('tbody');
-                    kartentabelle.innerHTML = "";
-                    daten.forEach(card => {
-                        let idtwo = card.nummer;
-                        let isinlist = false;
-                        let cardid;
-                        let cardan;
-                        numinfile.forEach(idandan=>{
-                            if(idandan.nummer==idtwo)
-                            {
-                                isinlist = true;
-                                cardid=idandan.nummer;
-                                cardan=idandan.anzahl;
-                            }
-                        })
-                        const tabellezeile = document.createElement('tr');
-                        if(isinlist==true)
+            catch
+            {
+            console.log("no file selected");
+            }
+        }
+        reader.readAsText(fileglobal);
+        fetch(document.getElementById('setsselection').value)
+            .then(response => response.json())
+            .then(daten => {
+                const kartentabelle = document.getElementById('mtgcardlist').querySelector('tbody');
+                kartentabelle.innerHTML = "";
+                daten.forEach(card => {
+                    let idtwo = card.nummer;
+                    let isinlist = false;
+                    let cardid;
+                    let cardan;
+                    numinfile.forEach(idandan=>{
+                        if(idandan.nummer==idtwo)
                         {
-                            tabellezeile.id = `karte${cardid}`;
-                            tabellezeile.innerHTML = `
-                                <td id="mtgtablecell">${cardid}</td>
-                                <td id="mtgtablecell">${card.name}</td>
-                                <td id="mtgtablecell">${cardan}</td>
-                                <td id="mtgtablecell">${card.setcode}</td>
-                                <td id="mtgtablecell"><button onclick="addcard(parentElement)">+</button></td>
-                                <td id="mtgtablecell"><button onclick="removecard(parentElement)">-</button></td>
-                                <td id="mtgtablecell">
-                                <div class="tooltip">&#128065
-                                <span class="tooltiptext"><img src="${card.bildlink}" alt="failed to Load Image" id="imagecard"></span>
-                                </div>
-                                </td>
-                            `;
+                            isinlist = true;
+                            cardid=idandan.nummer;
+                            cardan=idandan.anzahl;
                         }
-                        else
-                        {
-                            tabellezeile.id = `karte${card.nummer}`;
-                            tabellezeile.innerHTML = `
-                                <td id="mtgtablecell">${card.nummer}</td>
-                                <td id="mtgtablecell">${card.name}</td>
-                                <td id="mtgtablecell">${card.anzahl}</td>
-                                <td id="mtgtablecell">${card.setcode}</td>
-                                <td id="mtgtablecell"><button onclick="addcard(parentElement)">+</button></td>
-                                <td id="mtgtablecell"><button onclick="removecard(parentElement)">-</button></td>
-                                <td id="mtgtablecell">
-                                <div class="tooltip">&#128065
-                                <span class="tooltiptext"><img src="${card.bildlink}" alt="failed to Load Image" id="imagecard"></span>
-                                </div>
-                                </td>
-                            `;
-                        }
-                        kartentabelle.appendChild(tabellezeile);
-                    });
-                })
-        }
-        else {
-        if (document.getElementById('setsselection').value !== '') {
-            window.alert("please select a json File with the filename:" + document.getElementById('setsselection').value.substring(11, document.getElementById('setsselection').value.length - 5) + "fromCardGamesCollectedCards")
-        } else {
-            window.alert('Please Select a Set!!!')
-        }
-        }
+                    })
+                    const tabellezeile = document.createElement('tr');
+                    if(isinlist==true)
+                    {
+                        tabellezeile.id = `karte${cardid}`;
+                        tabellezeile.innerHTML = `
+                            <td id="mtgtablecell">${cardid}</td>
+                            <td id="mtgtablecell">${card.name}</td>
+                            <td id="mtgtablecell">${cardan}</td>
+                            <td id="mtgtablecell">${card.setcode}</td>
+                            <td id="mtgtablecell"><button onclick="addcard(parentElement)">+</button></td>
+                            <td id="mtgtablecell"><button onclick="removecard(parentElement)">-</button></td>
+                            <td id="mtgtablecell">
+                            <div class="tooltip">&#128065
+                            <span class="tooltiptext"><img src="${card.bildlink}" alt="failed to Load Image" id="imagecard"></span>
+                            </div>
+                            </td>
+                        `;
+                    }
+                    else
+                    {
+                        tabellezeile.id = `karte${card.nummer}`;
+                        tabellezeile.innerHTML = `
+                            <td id="mtgtablecell">${card.nummer}</td>
+                            <td id="mtgtablecell">${card.name}</td>
+                            <td id="mtgtablecell">${card.anzahl}</td>
+                            <td id="mtgtablecell">${card.setcode}</td>
+                            <td id="mtgtablecell"><button onclick="addcard(parentElement)">+</button></td>
+                            <td id="mtgtablecell"><button onclick="removecard(parentElement)">-</button></td>
+                            <td id="mtgtablecell">
+                            <div class="tooltip">&#128065
+                            <span class="tooltiptext"><img src="${card.bildlink}" alt="failed to Load Image" id="imagecard"></span>
+                            </div>
+                            </td>
+                        `;
+                    }
+                    kartentabelle.appendChild(tabellezeile);
+                });
+            })
         await delay(250);
         getcollectionprogress();
     }
     catch
     {
-        window.alert("failed to get the data of your uploaded File, please check if your File is correct and has the right Name")
+            window.alert("failed to get the data of your uploaded File, please check if your File is correct and has the right Name")
     }
 }
 
