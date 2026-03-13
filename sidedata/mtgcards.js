@@ -268,7 +268,7 @@ function saveasfile()
 }
 
 /**
- * Method for loading collected cards from uploaded json file and adding missing cards from json from the same set
+ * Method for loading collected cards from uploaded json file or normal set file and adding missing cards from json from the same set
  */
 async function getasfile()
 {
@@ -366,7 +366,7 @@ async function getasfile()
     }
     catch
     {
-            window.alert("failed to get the data of your uploaded File, please check if your File is correct and has the right Name")
+            window.alert("failed to get the data of File, if you have uploaded a file,\nplease check if your File is correct and has the right Name.")
     }
 }
 
